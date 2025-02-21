@@ -10,7 +10,7 @@ class GoogleAnalytics implements SourceInterface
         return 'Google Analytics';
     }
 
-    public function getData(): int
+    public function getVisits(): int
     {
         return 150; // Hardcoded for now but can be replaced with actual data from Google Analytics API
     }

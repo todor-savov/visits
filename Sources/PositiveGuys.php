@@ -10,7 +10,7 @@ class PositiveGuys implements SourceInterface
         return 'Positive Guys';
     }
 
-    public function getData(): int
+    public function getVisits(): int
     {
         return 1200; // Hardcoded for now but can be replaced with actual data from Positive Guys API
     }

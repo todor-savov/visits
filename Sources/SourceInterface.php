@@ -7,5 +7,5 @@ interface SourceInterface
 {
     public function getName(): string;
 
-    public function getData(): int;
+    public function getVisits(): int;
 }

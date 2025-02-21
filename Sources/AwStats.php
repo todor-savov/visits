@@ -10,7 +10,7 @@ class AwStats implements SourceInterface
         return 'AwStats';
     }
 
-    public function getData(): int
+    public function getVisits(): int
     {
         return 850; // Hardcoded for now but can be replaced with actual data from AwStats API
     }
