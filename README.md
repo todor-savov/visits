@@ -6,7 +6,7 @@ This project is a lightweight PHP-based API designed to aggregate website statis
 
 - No frameworks or router packages (vanilla PHP implementation)
 - Supports multiple data sources (e.g. Google Analytics, Positive Guys, AwStats, etc.)
-- JSON response format (XML will be considered additionally)
+- JSON and XML response formats
 - Graceful error handling
 - Easily extendable architecture for adding new sources
 
