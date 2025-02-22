@@ -89,9 +89,9 @@ Adding a new data source is simple:
 
 ### 1. Create a new PHP class inside Sources/Visits (e.g., MyNewSource.php), if the source will be used for visit stats.
 
-### 2. Implement a getVisits() method inside that class.
+### 2. Implement a getVisits() and getName() methods inside that class.
 
-### 3. Register the new source in the controller handling this type of data - e.g.VisitsController.php.
+### 3. Register the new source in the controller handling this type of data - e.g. VisitsController.php.
 
 Example: Adding a New Data Source
 
@@ -118,6 +118,7 @@ Register the New Source in VisitsController.php
             new GoogleAnalytics(),
             new PositiveGuys(),
             new AwStats(),
+            new MyNewSource()
         ];
 ```
 
