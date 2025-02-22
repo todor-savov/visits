@@ -37,12 +37,14 @@ class Router
      */
     public function run(string $method, string $path)
     {
+        $format = $_GET['format'] ?? 'json'; // Takes the format provided in the query string, default is JSON
+
         foreach ($this->routes as $route) {
             if ($route['method'] === $method && $route['path'] === $path) {
-                return call_user_func($route['handler']);
+                return call_user_func($route['handler'], $format);
             }
         }
 
-        return Response::json(['error' => 'true', 'message' => 'Route not found'], 404);
+        return Response::send(['error' => 'true', 'message' => 'Route not found'], 404, $format);
     }
 }
