@@ -127,13 +127,19 @@ Now, the API will automatically include data from MyNewSource.
 
 ## Error Handling
 
-The API gracefully handles errors and returns meaningful responses in JSON format:
+The API gracefully handles errors and returns meaningful responses in JSON/XML format:
 
 ```bash
 {
-  "error": true,
-  "message": "Invalid request"
+    "error": "true",
+    "message": "Route not found"
 }
+```
+```bash
+<response>
+<error>true</error>
+<message>Route not found</message>
+</response>
 ```
 
 ## License
