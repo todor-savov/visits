@@ -44,18 +44,18 @@ Visit http://localhost:8000 in your browser to confirm that the API is running.
 
 ```bash
 visits/
-|-- index.php         # Main entry point which initializes the router and controller methods
+|-- index.php                     # Main entry point which initializes the router and controller methods
 |-- Core/
-    |-- Controllers/  # Folder containing different controller methods depending on the type of requested data
-        |-- VisitsController.php # Provides controller method for aggregating visit stats
-    |-- Router.php    # The routing logic of the application (matching routes with controller methods)
-    |-- Response.php  # Handling the response to user requests including format
+    |-- Controllers/              # Folder containing different controller methods depending on the type of requested data
+        |-- VisitsController.php  # Provides controller method for aggregating visit stats
+    |-- Router.php                # The routing logic of the application (matching routes with controller methods)
+    |-- Response.php              # Handling the response to user requests including format
 |-- Sources/
-    |-- GoogleAnalytics.php  # Example data source
-    |-- PositiveGuys.php     # Example data source
-    |-- AwStats.php          # Example data source
-    |-- SourceInterface.php  # Interface to be implemented by each data source
-│── README.md         # Project documentation
+    |-- GoogleAnalytics.php       # Example data source
+    |-- PositiveGuys.php          # Example data source
+    |-- AwStats.php               # Example data source
+    |-- SourceInterface.php       # Interface to be implemented by each data source
+│── README.md                     # Project documentation
 ```
 
 ## API Usage
