@@ -8,11 +8,13 @@
 class VisitsController
 {
     /**
-     * Retrieves total website visit stats from multiple sources.
+     * Retrieves total website visits from multiple sources.
+     *
+     * @param string $format the requested response format ('json' or 'xml')
      *
      * @return string JSON response containing visit stats from different sources
      */
-    public function getAllVisits()
+    public function getAllVisits(string $format = 'json'): string
     {
         // An array is instantiated with all sources of website visits
         $sources = [
@@ -30,6 +32,6 @@ class VisitsController
         }
 
         // The combined array is returned to the user as JSON
-        return Response::json(['error' => false, 'message' => '', 'data' => $data]);
+        return Response::send(['error' => false, 'message' => '', 'data' => $data], 200, $format);
     }
 }
