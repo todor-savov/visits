@@ -90,11 +90,11 @@ Response Example:
 
 Adding a new data source is simple:
 
-### 1. Create a new PHP class inside Sources/Visits (e.g., MyNewSource.php), if the source will be used for visit stats.
+1. Create a new PHP class inside Sources/Visits (e.g., MyNewSource.php), if the source will be used for visit stats.
 
-### 2. Implement a getVisits() and getName() methods inside that class.
+2. Implement a getVisits() and getName() methods inside that class.
 
-### 3. Register the new source in the controller handling this type of data - e.g. VisitsController.php.
+3. Register the new source in the controller handling this type of data - e.g. VisitsController.php.
 
 Example: Adding a New Data Source
 
@@ -139,8 +139,8 @@ The API gracefully handles errors and returns meaningful responses in JSON/XML f
 ```
 ```bash
 <response>
-<error>true</error>
-<message>Route not found</message>
+    <error>true</error>
+    <message>Route not found</message>
 </response>
 ```
 
