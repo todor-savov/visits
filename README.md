@@ -127,6 +127,8 @@ Register the New Source in VisitsController.php
 
 Now, the API will automatically include data from MyNewSource.
 
+**NB! Each Source file can be integrated with external API endpoint via its getVisits() method (by implementing the required logic in its body).**
+
 ## Error Handling
 
 The API gracefully handles errors and returns meaningful responses in JSON/XML format:
