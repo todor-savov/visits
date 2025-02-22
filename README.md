@@ -10,6 +10,8 @@ This project is a lightweight PHP-based API designed to aggregate website statis
 - Graceful error handling
 - Easily extendable architecture for adding new sources
 
+The format is specified by the user in the URL itself (and defaults to JSON): http://localhost:8000/visits?format=xml|json
+
 ## Local Installation & Setup
 
 ### 1. Prerequisites
