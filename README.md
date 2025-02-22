@@ -87,32 +87,38 @@ Response Example:
 
 Adding a new data source is simple:
 
-### 1. Create a new PHP class inside Sources/ (e.g., MyNewSource.php).
+### 1. Create a new PHP class inside Sources/Visits (e.g., MyNewSource.php), if the source will be used for visit stats.
 
-### 2. Implement a fetchData() method inside that class.
+### 2. Implement a getVisits() method inside that class.
 
-### 3. Register the new source in statistics.php.
+### 3. Register the new source in the controller handling this type of data - e.g.VisitsController.php.
 
 Example: Adding a New Data Source
 
 ```bash
-namespace Sources;
 
 class MyNewSource {
-    public function fetchData() {
-        return ["MyNewSource" => 250];
+    
+    public function getName(): string
+    {
+        return 'New Source';
+    }
+
+    public function getVisits(): int
+    {
+        return 1000; 
     }
 }
 ```
 
-Register the New Source in statistics.php
+Register the New Source in VisitsController.php
 
 ```bash
-$sources = [
-    new Sources\GoogleAnalytics(),
-    new Sources\PositiveGuys(),
-    new Sources\MyNewSource()  // Add new source here
-];
+  $sources = [
+            new GoogleAnalytics(),
+            new PositiveGuys(),
+            new AwStats(),
+        ];
 ```
 
 Now, the API will automatically include data from MyNewSource.
