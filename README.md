@@ -51,10 +51,11 @@ visits/
     |-- Router.php                # The routing logic of the application (matching routes with controller methods)
     |-- Response.php              # Handling the response to user requests including format
 |-- Sources/
-    |-- GoogleAnalytics.php       # Example data source
-    |-- PositiveGuys.php          # Example data source
-    |-- AwStats.php               # Example data source
-    |-- SourceInterface.php       # Interface to be implemented by each data source
+    |-- Visits/
+        |-- GoogleAnalytics.php   # Example data source
+        |-- PositiveGuys.php      # Example data source
+        |-- AwStats.php           # Example data source
+        |-- SourceInterface.php   # Interface to be implemented by each data source
 │── README.md                     # Project documentation
 ```
 
